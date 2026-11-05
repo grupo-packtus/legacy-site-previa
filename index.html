@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Legacy Business B2G | Mentoria para empresas que querem vender para o governo</title>
-<meta name="description" content="Mentoria do Legacy Business B2G para empresas que querem vender para o governo, conduzida por Alberto Machado e Waldo Souza.">
+<meta name="description" content="O governo compra de empresas privadas. O Legacy Business B2G é a mentoria que prepara a sua empresa para disputar essas compras, com a Central de Licitações executando ao seu lado.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0B2038">
 <link rel="preload" href="/assets/fontes/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -15,118 +15,151 @@
 <style>
 @font-face{font-family:Inter;src:url(/assets/fontes/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Inter;src:url(/assets/fontes/inter-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
-:root{--navy:#0B2038;--navy2:#081A2E;--perola:#F4F1EA;--perola2:#F2EEE5;--borda:#E5E2DB;--t2:#44576D;--t3:#5A6B7D;--ouro:#7F6636;--ouroc:#E8D5A4;--ouroc2:#C9AE6E;--claro:#F6F5F2;--rod:#AEBED0;--ok:#2E8B5E;--at:#B9831C;--fo:#B6464B;--suave:cubic-bezier(.22,.7,.2,1)}
+:root{--navy:#0B2038;--navy2:#081A2E;--navy3:#12304F;--perola:#F4F1EA;--perola2:#F2EEE5;--borda:#E5E2DB;--t2:#44576D;--t3:#5A6B7D;--ouro:#7F6636;--ouroc:#E8D5A4;--ouroc2:#C9AE6E;--claro:#F6F5F2;--rod:#AEBED0;--ok:#3FA572;--at:#D9A53A;--fo:#D0585D;--okc:#2E8B5E;--atc:#B9831C;--foc:#B6464B;--suave:cubic-bezier(.22,.7,.2,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,Arial,sans-serif;background:var(--perola);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 img{display:block;max-width:100%}
-.wrap{width:min(1120px,100% - 48px);margin-inline:auto}
+.wrap{width:min(1160px,100% - 48px);margin-inline:auto}
 .pular{position:absolute;left:-999px}.pular:focus{left:16px;top:16px;z-index:99;background:var(--ouroc);color:var(--navy);padding:8px 14px;border-radius:8px}
-.olho{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ouro)}
-.olho b{font-weight:600;color:var(--ouro)}
-.escuro .olho,.escuro .olho b{color:var(--ouroc2)}
+.olho{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ouro)}
+.escuro .olho{color:var(--ouroc2)}
 .filete{width:56px;height:2px;background:var(--ouro);margin:20px 0 26px}
 .escuro .filete{background:var(--ouroc2)}
+.centro-txt .filete{margin-inline:auto}
 .losango{display:inline-block;width:7px;height:7px;background:currentColor;transform:rotate(45deg);margin:0 2px}
-h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-weight:600;max-width:20ch}
-.abre{font-size:clamp(17px,1.5vw,19px);color:var(--t2);max-width:620px;margin-top:18px}
+h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;letter-spacing:-.022em;font-weight:600;max-width:22ch}
+.centro-txt{text-align:center}.centro-txt h2,.centro-txt .abre{margin-inline:auto}.centro-txt .olho{justify-content:center}
+.abre{font-size:clamp(17px,1.5vw,19px);color:var(--t2);max-width:640px;margin-top:18px}
 .escuro .abre{color:#D3DAE3}
 
 /* topo */
 .topo{position:absolute;inset:0 0 auto 0;z-index:5;padding:26px 0}
 .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .topo img{height:42px;width:auto}
-.link-topo{font-size:14px;font-weight:600;color:var(--ouroc);text-decoration:none;border-bottom:1px solid rgba(232,213,164,.45);padding-bottom:2px;transition:border-color .3s}
-.link-topo:hover{border-color:var(--ouroc)}
+.link-topo{font-size:14px;font-weight:600;color:var(--ouroc);text-decoration:none;border:1px solid rgba(232,213,164,.4);border-radius:999px;padding:9px 18px;transition:background .3s,border-color .3s}
+.link-topo:hover{background:rgba(232,213,164,.1);border-color:var(--ouroc)}
 
 /* abertura */
-.abertura{position:relative;min-height:94svh;display:flex;align-items:flex-end;overflow:hidden;color:var(--claro);background:var(--navy);isolation:isolate;padding:140px 0 72px}
+.abertura{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;color:var(--claro);background:var(--navy);isolation:isolate;padding:150px 0 100px}
 .abertura-foto{position:absolute;inset:0;z-index:-2}
-.abertura-foto img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.04);animation:aproxima 30s var(--suave) forwards}
-.abertura::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,32,56,.45) 0%,rgba(11,32,56,.72) 45%,rgba(11,32,56,.96) 82%,#0B2038 100%),linear-gradient(90deg,rgba(11,32,56,.7) 0%,rgba(11,32,56,.15) 70%)}
-.abertura h1{font-size:clamp(38px,5.6vw,72px);line-height:1.04;letter-spacing:-.028em;font-weight:600;max-width:15ch;margin-top:22px}
+.abertura-foto img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.5;transform:scale(1.04);animation:aproxima 30s var(--suave) forwards}
+.abertura::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 75% 40%,rgba(36,74,120,.55),transparent 60%),linear-gradient(90deg,rgba(11,32,56,.96) 0%,rgba(11,32,56,.82) 50%,rgba(11,32,56,.88) 100%),linear-gradient(180deg,rgba(11,32,56,.2),#0B2038 96%)}
+.ab-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.abertura h1{font-size:clamp(38px,5vw,66px);line-height:1.05;letter-spacing:-.03em;font-weight:600;max-width:15ch;margin-top:22px}
 .abertura h1 span{color:var(--ouroc)}
-.abertura .sub{font-size:clamp(17px,1.6vw,20px);color:#D9DFE6;max-width:600px;margin-top:24px}
-.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:38px}
+.abertura .sub{font-size:clamp(17px,1.5vw,19px);color:#D9DFE6;max-width:560px;margin-top:24px}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;margin-top:38px}
 .btn{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:16px 28px;background:var(--ouroc);color:var(--navy);transition:transform .35s var(--suave),background .35s}
 .btn:hover{transform:translateY(-2px);background:#F0E1B8}
 .btn svg{transition:transform .35s var(--suave)}.btn:hover svg{transform:translateX(4px)}
-.quem{display:flex;align-items:center;gap:14px}
-.rostos{display:flex}
-.rostos img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--navy)}
-.rostos img+img{margin-left:-12px}
-.quem p{font-size:14.5px;line-height:1.35;color:#E3E7EC}
-.quem p span{display:block;font-size:13px;color:var(--rod)}
-.seta{position:absolute;left:50%;bottom:22px;width:22px;height:34px;margin-left:-11px;border:1.5px solid rgba(232,213,164,.5);border-radius:12px}
+.link-sec{font-size:15px;font-weight:600;color:var(--claro);text-decoration:none;border-bottom:1px solid rgba(246,245,242,.35);padding-bottom:2px}
+.link-sec:hover{border-color:var(--ouroc);color:var(--ouroc)}
+.seta{position:absolute;left:50%;bottom:24px;width:22px;height:34px;margin-left:-11px;border:1.5px solid rgba(232,213,164,.5);border-radius:12px}
 .seta::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--ouroc);animation:desce 2.4s var(--suave) infinite}
 
+/* radar girando */
+.scope{--s:180px;position:relative;width:var(--s);height:var(--s);border-radius:50%;flex:none;background:radial-gradient(circle,#173A60 0%,#10294A 60%,#0C2240 100%);box-shadow:inset 0 0 0 1px rgba(232,213,164,.22),0 0 0 6px rgba(232,213,164,.04)}
+.scope::before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,transparent 0 16.4%,rgba(232,213,164,.18) 16.6% 17%,transparent 17.2% 32.8%,rgba(232,213,164,.16) 33% 33.4%,transparent 33.6% 49.2%,rgba(232,213,164,.14) 49.4% 49.8%,transparent 50%),linear-gradient(rgba(232,213,164,.13),rgba(232,213,164,.13)) center/1px 100% no-repeat,linear-gradient(rgba(232,213,164,.13),rgba(232,213,164,.13)) center/100% 1px no-repeat}
+.varre{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0deg 292deg,rgba(232,213,164,0) 292deg,rgba(232,213,164,.34) 360deg);animation:gira 4s linear infinite}
+.varre::after{content:"";position:absolute;left:50%;top:2%;width:2px;height:48%;margin-left:-1px;background:linear-gradient(180deg,var(--ouroc),rgba(232,213,164,.4));border-radius:2px}
+.scope .miolo{position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--ouroc);box-shadow:0 0 12px rgba(232,213,164,.8)}
+.ponto{position:absolute;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;opacity:.45;animation:acende 4s ease-out infinite}
+.ponto.ok{background:var(--ok)}.ponto.at{background:var(--at)}.ponto.fo{background:var(--fo)}
+.p1{left:26%;top:15.6%;animation-delay:3.61s}.p2{left:67.2%;top:25.4%;animation-delay:.39s}.p3{left:88.6%;top:39.6%;animation-delay:.83s}.p4{left:64.1%;top:66.9%;animation-delay:1.56s}.p5{left:37.7%;top:83.8%;animation-delay:2.22s}.p6{left:21%;top:57.8%;animation-delay:2.83s}
+
+.rcard{background:linear-gradient(180deg,#16324F,#0E2540);border:1px solid rgba(232,213,164,.24);border-radius:24px;box-shadow:0 50px 90px -50px rgba(0,0,0,.75);overflow:hidden;color:#E9EDF2}
+.rc-topo{display:flex;align-items:center;gap:14px;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#AEBED0}
+.rc-topo .bolas{display:flex;gap:6px}.rc-topo .bolas i{width:10px;height:10px;border-radius:50%;background:rgba(174,190,208,.35)}
+.vivo{display:inline-flex;align-items:center;gap:7px;color:var(--ok);font-weight:600}
+.vivo::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulsa 1.8s ease-in-out infinite}
+.rc-corpo{padding:22px}
+.rc-emp{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:10px 16px;margin-bottom:18px}
+.rc-emp b{display:block;font-size:19px;font-weight:600;color:#fff}
+.rc-emp small{font-size:14px;color:#AEBED0}
+.pill{font-size:12.5px;color:var(--ouroc);border:1px solid rgba(232,213,164,.4);border-radius:999px;padding:6px 12px}
+.rc-meio{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.rc-nums{display:grid;gap:10px}
+.rc-num{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px 16px;font-size:14px;color:#D3DAE3;line-height:1.3}
+.rc-num strong{font-size:28px;line-height:1;font-weight:600;min-width:20px}
+.rc-num.ok strong{color:var(--ok)}.rc-num.at strong{color:var(--at)}.rc-num.fo strong{color:var(--fo)}
+.rc-lista{display:grid;gap:8px;margin-top:18px}
+.rc-linha{display:grid;grid-template-columns:4px 1fr auto;gap:14px;align-items:center;background:rgba(255,255,255,.04);border-radius:12px;padding:11px 16px 11px 12px;opacity:0;transform:translateY(8px);animation:sobe .8s var(--suave) forwards}
+.rc-linha:nth-child(1){animation-delay:1.1s}.rc-linha:nth-child(2){animation-delay:1.3s}.rc-linha:nth-child(3){animation-delay:1.5s}
+.rc-linha>i{align-self:stretch;border-radius:3px}
+.rc-linha.ok>i{background:var(--ok)}.rc-linha.at>i{background:var(--at)}.rc-linha.fo>i{background:var(--fo)}
+.rc-linha b{display:block;font-size:14.5px;font-weight:600;color:#fff;line-height:1.35}
+.rc-linha small{font-size:12.5px;color:#AEBED0}
+.rc-linha em{display:inline-block;font-style:normal;font-size:12px;margin-top:5px;padding:3px 8px;border-radius:6px}
+.rc-linha.at em{color:var(--at);background:rgba(217,165,58,.12)}.rc-linha.fo em{color:var(--fo);background:rgba(208,88,93,.12)}
+.rc-v{text-align:right}.rc-v b{font-size:14.5px}.rc-v small{white-space:nowrap}
+.rc-pe{padding:14px 22px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px;color:#AEBED0}
+.rc-pe b{color:#E9EDF2;font-weight:600}
+
 /* faixas */
-.faixa{position:relative;padding:110px 0;overflow:hidden}
+.faixa{position:relative;padding:120px 0;overflow:hidden}
 .faixa.clara{background:linear-gradient(180deg,var(--perola),var(--perola2))}
 .faixa.escuro{background:var(--navy);color:var(--claro)}
 .marca::after{content:"";position:absolute;right:-140px;top:60px;width:560px;height:560px;background:url(/assets/img/logo/simbolo-ouro-reforcado.svg) no-repeat center/contain;opacity:.06;pointer-events:none;z-index:0}
 .faixa>.wrap{position:relative;z-index:1}
 
-/* quem somos */
-.quem-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
-.mentores{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.mentor{background:#fff;border:1px solid var(--borda);border-radius:20px;overflow:hidden;transition:transform .5s var(--suave),box-shadow .5s var(--suave)}
-.mentor:hover{transform:translateY(-4px);box-shadow:0 30px 50px -34px rgba(11,32,56,.45)}
-.mentor .foto{aspect-ratio:4/5;overflow:hidden;background:var(--perola2)}
-.mentor .foto img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s var(--suave)}
-.mentor:hover .foto img{transform:scale(1.04)}
-.mentor div.txt{padding:18px 20px 22px}
-.mentor b{display:block;font-size:17px;font-weight:600}
-.mentor small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro);font-weight:600;margin:4px 0 10px}
-.mentor p{font-size:14.5px;color:var(--t2);line-height:1.55}
-.mls{display:flex;align-items:center;gap:14px;margin-top:30px;font-size:14px;color:var(--t3)}
-.mls img{height:40px;width:auto}
-
-/* como funciona */
-.frase{font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.02em;font-weight:600;max-width:24ch}
+/* tres passos */
+.passos{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.passos::before{content:"";position:absolute;left:8%;right:8%;top:34px;height:2px;background:var(--borda)}
+.passos::after{content:"";position:absolute;left:8%;top:34px;height:2px;width:0;background:var(--ouro);transition:width 1.8s var(--suave) .3s}
+.passos.visto::after{width:84%}
+.passo{position:relative;background:#fff;border:1px solid var(--borda);border-radius:22px;padding:28px 28px 30px;transition:transform .5s var(--suave),box-shadow .5s var(--suave)}
+.passo:hover{transform:translateY(-4px);box-shadow:0 30px 50px -36px rgba(11,32,56,.45)}
+.passo .n{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--ouroc);font-weight:600;font-size:16px;margin-bottom:18px;position:relative;z-index:1}
+.passo h3{font-size:22px;font-weight:600}
+.passo .quem-faz{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ouro);margin:6px 0 12px}
+.passo p{font-size:15.5px;color:var(--t2)}
+.frase{margin-top:56px;font-size:clamp(24px,2.8vw,36px);line-height:1.2;letter-spacing:-.02em;font-weight:600;text-align:center}
 .frase span{color:var(--ouro)}
-.dois{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:46px}
-.card{background:#fff;border:1px solid var(--borda);border-radius:20px;padding:30px 30px 32px}
-.card .num{font-size:13px;font-weight:600;color:var(--ouro);letter-spacing:.12em}
-.card h3{font-size:22px;font-weight:600;margin:10px 0 4px}
-.card .papel{font-size:15px;color:var(--ouro);font-weight:600;margin-bottom:12px}
-.card p{font-size:15.5px;color:var(--t2)}
-.card.navy{background:var(--navy);border-color:var(--navy);color:var(--claro)}
-.card.navy .num,.card.navy .papel{color:var(--ouroc)}
-.card.navy p{color:#D3DAE3}
 
-/* radar */
-.radar{margin-top:20px;background:#fff;border:1px solid var(--borda);border-radius:24px;overflow:hidden}
-.r-cab{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;padding:24px 30px 20px;border-bottom:1px solid var(--borda)}
-.r-cab::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--ouro)}
-.visto .r-cab::after{animation:le 2.2s var(--suave) .2s forwards}
-.r-cab b{font-size:18px;font-weight:600}
-.r-cab span{font-size:14px;color:var(--t3)}
-.r-corpo{display:grid;grid-template-columns:260px 1fr;gap:0}
-.r-nums{padding:26px 30px;border-right:1px solid var(--borda);display:grid;gap:18px;align-content:start;background:linear-gradient(180deg,#fff,var(--perola))}
-.r-num{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center}
-.r-num strong{font-size:40px;line-height:1;font-weight:600;grid-row:span 2}
-.r-num.ok strong{color:var(--ok)}.r-num.at strong{color:var(--at)}.r-num.fo strong{color:var(--fo)}
-.r-num i{font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
-.r-num.ok i{color:var(--ok)}.r-num.at i{color:var(--at)}.r-num.fo i{color:var(--fo)}
-.r-num small{font-size:14px;color:var(--t2);line-height:1.35}
-.r-lista{padding:10px 0}
-.r-linha{display:grid;grid-template-columns:4px 1fr auto;gap:18px;align-items:center;padding:14px 30px 14px 26px;border-bottom:1px solid #EFECE5;opacity:0;transform:translateY(10px);transition:opacity .7s var(--suave),transform .7s var(--suave)}
-.r-linha:last-child{border-bottom:0}
-.visto .r-linha{opacity:1;transform:none}
-.visto .r-linha:nth-child(1){transition-delay:.35s}.visto .r-linha:nth-child(2){transition-delay:.5s}.visto .r-linha:nth-child(3){transition-delay:.65s}.visto .r-linha:nth-child(4){transition-delay:.8s}.visto .r-linha:nth-child(5){transition-delay:.95s}
-.r-linha>i{align-self:stretch;border-radius:4px}
-.r-linha.ok>i{background:var(--ok)}.r-linha.at>i{background:var(--at)}.r-linha.fo>i{background:var(--fo)}
-.r-o b{display:block;font-size:15px;font-weight:600;line-height:1.35}
-.r-o small{font-size:13px;color:var(--t3)}
-.r-o em{display:block;font-style:normal;font-size:13px;margin-top:3px}
-.r-linha.at .r-o em{color:var(--at)}.r-linha.fo .r-o em{color:var(--fo)}
-.r-v{text-align:right}
-.r-v b{display:block;font-size:15px;font-weight:600}
-.r-v small{font-size:13px;color:var(--t3);white-space:nowrap}
-.r-pe{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;padding:16px 30px;border-top:1px solid var(--borda);background:var(--perola);font-size:13.5px;color:var(--t3)}
-.r-pe b{color:var(--navy);font-weight:600}
+/* hub do radar */
+.hub{position:relative;height:640px;margin-top:60px}
+.fios{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fios path{fill:none;stroke:rgba(232,213,164,.5);stroke-width:1.5;stroke-dasharray:4 7;vector-effect:non-scaling-stroke;animation:flui 1.6s linear infinite}
+.hub-centro{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;justify-items:center;gap:16px;text-align:center}
+.hub-centro .scope{--s:250px}
+.selo-centro{display:inline-flex;align-items:center;gap:8px;background:var(--ouroc);color:var(--navy);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;box-shadow:0 14px 30px -14px rgba(232,213,164,.6)}
+.no{position:absolute;width:27%;background:#fff;color:var(--navy);border-radius:18px;padding:18px 20px 20px;box-shadow:0 30px 60px -34px rgba(0,0,0,.7);animation:flutua 8s ease-in-out infinite}
+.no .cab{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.ico{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--ouroc);flex:none}
+.ico svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.no b{font-size:16.5px;font-weight:600;line-height:1.25}
+.no p{font-size:14.5px;color:var(--t2);line-height:1.5}
+.n1{left:0;top:3%}.n2{left:0;top:40%;animation-delay:-2s}.n3{left:2%;top:76%;animation-delay:-4s}
+.n4{right:0;top:3%;animation-delay:-1s}.n5{right:0;top:40%;animation-delay:-3s}.n6{right:2%;top:76%;animation-delay:-5s}
+.hub-pe{margin-top:34px;text-align:center;font-size:14px;color:var(--rod)}
+
+/* para quem */
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.momento{background:#fff;border:1px solid var(--borda);border-radius:22px;padding:30px;border-top:3px solid var(--ouro)}
+.momento small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ouro)}
+.momento h3{font-size:21px;font-weight:600;line-height:1.25;margin:10px 0 10px}
+.momento p{font-size:15.5px;color:var(--t2)}
+.junto{margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:26px;overflow:hidden;background:var(--navy);color:var(--claro)}
+.junto .foto{position:relative;min-height:340px}
+.junto .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--suave)}
+.junto:hover .foto img{transform:scale(1.04)}
+.junto .txt{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
+.junto h3{font-size:clamp(26px,2.6vw,36px);line-height:1.15;letter-spacing:-.02em;font-weight:600}
+.junto h3 span{color:var(--ouroc)}
+.junto p{color:#D3DAE3;font-size:16.5px;margin-top:16px}
+
+/* quem conduz */
+.conduz{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.mentores{display:grid;gap:16px}
+.mentor{display:flex;align-items:center;gap:20px;background:#fff;border:1px solid var(--borda);border-radius:20px;padding:18px 22px}
+.mentor img{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:top;flex:none}
+.mentor b{display:block;font-size:17px;font-weight:600}
+.mentor small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro);font-weight:600;margin:2px 0 6px}
+.mentor p{font-size:14.5px;color:var(--t2);line-height:1.5}
+.mls{display:flex;align-items:center;gap:14px;margin-top:28px;font-size:14px;color:var(--t3)}
+.mls img{height:40px;width:auto}
 
 /* diagnostico */
 .diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
@@ -152,7 +185,7 @@ h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-
 .aceite-opcional{margin-top:8px}
 .erro-campo,.form-erro{color:#B23A3F;font-size:13px;margin-top:5px}
 .btn-form{width:100%;display:flex;justify-content:center;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:17px;padding:16px;border-radius:999px;background:var(--navy);color:var(--ouroc);margin-top:6px;transition:background .3s,transform .3s var(--suave)}
-.btn-form:hover{background:#12304F;transform:translateY(-1px)}
+.btn-form:hover{background:var(--navy3);transform:translateY(-1px)}
 .form-obs{font-size:12.5px;color:var(--t3);margin-top:14px}
 .campo-mel{position:absolute;left:-9999px}
 
@@ -171,49 +204,60 @@ h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-
 
 /* movimento */
 .entra{opacity:0;transform:translateY(24px);animation:sobe 1.1s var(--suave) forwards}
-.d1{animation-delay:.15s}.d2{animation-delay:.3s}.d3{animation-delay:.5s}.d4{animation-delay:.7s}
+.d1{animation-delay:.15s}.d2{animation-delay:.3s}.d3{animation-delay:.5s}.d4{animation-delay:.7s}.d5{animation-delay:.6s}
 .js .revela{opacity:0;transform:translateY(30px);transition:opacity 1s var(--suave),transform 1s var(--suave)}
 .js .revela.visto{opacity:1;transform:none}
 .js .revela.r2{transition-delay:.15s}.js .revela.r3{transition-delay:.3s}
 @keyframes aproxima{to{transform:scale(1.12)}}
 @keyframes sobe{to{opacity:1;transform:none}}
 @keyframes desce{0%{opacity:0;transform:translateY(0)}30%{opacity:1}80%,100%{opacity:0;transform:translateY(12px)}}
-@keyframes le{to{width:100%}}
+@keyframes gira{to{transform:rotate(360deg)}}
+@keyframes acende{0%{opacity:1;transform:scale(1.6);box-shadow:0 0 14px currentColor}25%{opacity:.85;transform:scale(1)}100%{opacity:.4;transform:scale(1)}}
+@keyframes pulsa{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes flui{to{stroke-dashoffset:22}}
+@keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 
+@media (max-width:1060px){
+.ab-grid{grid-template-columns:1fr;gap:48px}
+.rcard{max-width:600px}
+}
 @media (max-width:960px){
-.quem-grid,.diag-grid,.dois{grid-template-columns:1fr;gap:36px}
-.r-corpo{grid-template-columns:1fr}
-.r-nums{border-right:0;border-bottom:1px solid var(--borda);grid-template-columns:repeat(3,1fr)}
-.r-num{grid-template-columns:1fr}
-.r-num strong{grid-row:auto}
-.faixa{padding:84px 0}
+.passos,.tres,.junto,.conduz,.diag-grid{grid-template-columns:1fr}
+.passos{gap:16px}.passos::before,.passos::after{display:none}
+.junto .foto{min-height:240px}.junto .txt{padding:36px 28px}
+.hub{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fios{display:none}
+.hub-centro{position:static;transform:none;grid-column:1/-1;margin:0 auto 18px}
+.hub-centro .scope{--s:200px}
+.no{position:static;width:auto;animation:none}
+.faixa{padding:88px 0}
+.conduz{gap:36px}
 }
 @media (max-width:560px){
 .wrap{width:calc(100% - 32px)}
-.link-topo{display:none}
-.mentores{gap:12px}
-.mentor div.txt{padding:14px}
-.mentor p{font-size:13.5px}
-.r-nums{grid-template-columns:1fr;gap:14px;padding:22px}
-.r-num{grid-template-columns:auto 1fr}
-.r-num strong{grid-row:span 2;font-size:32px}
-.r-linha{grid-template-columns:4px 1fr;padding:14px 20px 14px 16px}
-.r-v{grid-column:2;text-align:left;display:flex;gap:10px;align-items:baseline}
-.r-cab,.r-pe{padding-left:20px;padding-right:20px}
-.card,.form-unico{padding:24px}
-.abertura{padding-bottom:84px}
+.topo img{height:34px}
+.link-topo{font-size:13px;padding:8px 14px}
+.olho{font-size:11px;letter-spacing:.14em;gap:6px 8px}
+.abertura{padding:120px 0 90px}
+.rc-meio{grid-template-columns:1fr;justify-items:center}
+.rc-meio .scope{--s:150px}
+.rc-nums{width:100%}
+.rc-linha{grid-template-columns:4px 1fr}
+.rc-v{grid-column:2;text-align:left;display:flex;gap:10px;align-items:baseline}
+.hub{grid-template-columns:1fr}
+.momento,.passo,.form-unico{padding:24px}
+.mentor{padding:16px}.mentor img{width:68px;height:68px}
 }
 @media (prefers-reduced-motion:reduce){
 *,*::before,*::after{animation:none!important;transition:none!important}
-.entra,.js .revela,.r-linha{opacity:1!important;transform:none!important}
-.r-cab::after{width:100%}
+.entra,.js .revela,.rc-linha{opacity:1!important;transform:none!important}
+.passos::after{width:84%}
 }
 .estatico *,.estatico *::before,.estatico *::after{animation:none!important;transition:none!important}
-.estatico .entra,.estatico .revela,.estatico .r-linha{opacity:1!important;transform:none!important}
-.estatico .r-cab::after{width:100%}
+.estatico .entra,.estatico .revela,.estatico .rc-linha{opacity:1!important;transform:none!important}
+.estatico .passos::after{width:84%}
 .estatico .cookies{display:none!important}
 [hidden]{display:none!important}
-@media (max-width:560px){.olho{flex-wrap:wrap;font-size:11px;letter-spacing:.14em;gap:6px 8px}}
 </style>
 </head>
 <body>
@@ -230,74 +274,131 @@ h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-
 
 <section class="abertura escuro" aria-labelledby="titulo">
   <div class="abertura-foto" aria-hidden="true"><img src="/assets/img/fotos/lam-capa.webp" alt=""></div>
+  <div class="wrap ab-grid">
+    <div>
+      <p class="olho entra d1">Legacy Business B2G <span class="losango"></span> Mentoria do mercado público</p>
+      <h1 id="titulo" class="entra d2">O governo compra de empresas privadas. <span>A sua pode ser uma delas.</span></h1>
+      <p class="sub entra d3">Prefeituras, estados e órgãos federais publicam cada compra antes de fazê-la, num edital aberto a qualquer empresa. Quem está preparado disputa. O Legacy Business B2G é a mentoria que prepara a sua empresa para esse mercado, com um time que encontra as oportunidades e entra com você em cada disputa.</p>
+      <div class="acoes entra d4">
+        <a class="btn" href="#diagnostico">Agende o Diagnóstico gratuito <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="link-sec" href="#como-funciona">Veja como funciona</a>
+      </div>
+    </div>
+
+    <figure class="rcard entra d5" aria-label="Exemplo ilustrativo do Radar de Oportunidades, com dados fictícios">
+      <div class="rc-topo"><span class="bolas" aria-hidden="true"><i></i><i></i><i></i></span><span>Radar de Oportunidades</span><span class="vivo">Lendo</span></div>
+      <div class="rc-corpo">
+        <div class="rc-emp"><div><b>Sua empresa</b><small>Manutenção predial</small></div><span class="pill">Brasil inteiro, em tudo o que você vende</span></div>
+        <div class="rc-meio">
+          <div class="scope" aria-hidden="true"><div class="varre"></div><span class="ponto fo p1"></span><span class="ponto ok p2"></span><span class="ponto ok p3"></span><span class="ponto ok p4"></span><span class="ponto at p5"></span><span class="ponto at p6"></span><span class="miolo"></span></div>
+          <div class="rc-nums">
+            <div class="rc-num ok"><strong data-conta="3">3</strong>prontas para disputar hoje</div>
+            <div class="rc-num at"><strong data-conta="2">2</strong>disputáveis depois de resolver uma pendência</div>
+            <div class="rc-num fo"><strong data-conta="1">1</strong>fora do que a empresa entrega</div>
+          </div>
+        </div>
+        <div class="rc-lista">
+          <div class="rc-linha ok"><i></i><div><b>Manutenção predial de escolas</b><small>Pregão eletrônico · Prefeitura</small></div><div class="rc-v"><b>R$ 1,4 mi</b><small>sessão em 9 dias</small></div></div>
+          <div class="rc-linha at"><i></i><div><b>Reforma de ala hospitalar</b><small>Concorrência · Hospital universitário</small><br><em>Falta um atestado compatível</em></div><div class="rc-v"><b>R$ 2,3 mi</b><small>sessão em 21 dias</small></div></div>
+          <div class="rc-linha fo"><i></i><div><b>Fornecimento de mobiliário escolar</b><small>Pregão eletrônico · Secretaria estadual</small><br><em>Fora do que a empresa entrega</em></div><div class="rc-v"><b>R$ 900 mil</b><small>sessão em 18 dias</small></div></div>
+        </div>
+      </div>
+      <figcaption class="rc-pe"><b>A cor sai de seis pontos.</b> Objeto, documentos, atestado, estrutura, cadastro na plataforma e prazo. Exemplo com dados fictícios.</figcaption>
+    </figure>
+  </div>
+  <a class="seta" href="#como-funciona" aria-label="Descer para ver como funciona"></a>
+</section>
+
+<section class="faixa clara marca" id="como-funciona" aria-labelledby="titulo-como">
   <div class="wrap">
-    <p class="olho entra d1">Legacy Business B2G <span class="losango"></span> Mentoria do mercado público</p>
-    <h1 id="titulo" class="entra d2">Mentoria para empresas que querem <span>vender para o governo.</span></h1>
-    <p class="sub entra d3">Prefeituras, estados e órgãos federais compram de empresas privadas por licitação e publicam cada compra antes de fazê-la. O Legacy Business B2G prepara a sua empresa para entrar nessas compras, com método e com quem conhece esse mercado.</p>
-    <div class="acoes entra d4">
-      <a class="btn" href="#diagnostico">Agende o Diagnóstico gratuito <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div class="quem">
-        <div class="rostos"><img src="/assets/img/pessoas/alberto-machado-320.webp" alt="Alberto Machado" width="48" height="48"><img src="/assets/img/pessoas/waldo-souza-320.webp" alt="Waldo Souza" width="48" height="48"></div>
-        <p>Alberto Machado e Waldo Souza<span>Mentores principais</span></p>
+    <div class="revela centro-txt">
+      <p class="olho"><b>01</b> <span class="losango"></span> Como funciona</p>
+      <div class="filete"></div>
+      <h2 id="titulo-como">Três passos entre a sua empresa e o governo.</h2>
+      <p class="abre">Vender para o governo não depende de conhecer alguém. Depende de achar a compra certa, estar com a empresa em ordem e disputar do jeito certo.</p>
+    </div>
+    <div class="passos revela">
+      <article class="passo"><span class="n">1</span><h3>Encontrar</h3><p class="quem-faz">Central de Licitações</p><p>A Central varre as compras abertas no Brasil inteiro e separa as que combinam com o que a sua empresa vende, cada uma com a cor do que falta para disputar.</p></article>
+      <article class="passo"><span class="n">2</span><h3>Preparar</h3><p class="quem-faz">Mentoria</p><p>Na mentoria, a empresa coloca em ordem documentos, cadastros, preço e equipe, e resolve as pendências antes de cada disputa.</p></article>
+      <article class="passo"><span class="n">3</span><h3>Disputar</h3><p class="quem-faz">Central de Licitações</p><p>A Central entra com a sua empresa nas disputas escolhidas e acompanha cada uma até o fim.</p></article>
+    </div>
+    <p class="frase revela">Quem prepara é o Legacy Business B2G. <span>Quem executa é a Central.</span></p>
+  </div>
+</section>
+
+<section class="faixa escuro" aria-labelledby="titulo-hub">
+  <div class="wrap">
+    <div class="revela centro-txt">
+      <p class="olho"><b>02</b> <span class="losango"></span> O que acontece por dentro</p>
+      <div class="filete"></div>
+      <h2 id="titulo-hub">No centro, o Radar. Em volta, a mentoria inteira trabalhando pela sua empresa.</h2>
+      <p class="abre">O Radar mostra as oportunidades. Tudo o que gira em volta prepara a empresa para aproveitá-las.</p>
+    </div>
+
+    <div class="hub revela">
+      <svg class="fios" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M27 13 C36 13 40 22 42 33"/><path d="M27 49 C33 49 35 50 39 50"/><path d="M29 85 C38 85 41 76 42 66"/>
+        <path d="M73 13 C64 13 60 22 58 33"/><path d="M73 49 C67 49 65 50 61 50"/><path d="M71 85 C62 85 59 76 58 66"/>
+      </svg>
+      <div class="hub-centro">
+        <div class="scope" aria-hidden="true"><div class="varre"></div><span class="ponto fo p1"></span><span class="ponto ok p2"></span><span class="ponto ok p3"></span><span class="ponto ok p4"></span><span class="ponto at p5"></span><span class="ponto at p6"></span><span class="miolo"></span></div>
+        <span class="selo-centro">Radar de Oportunidades</span>
+      </div>
+      <article class="no n1"><div class="cab"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><b>Central de Licitações</b></div><p>Encontra as compras certas e entra com a sua empresa nas disputas.</p></article>
+      <article class="no n2"><div class="cab"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><b>Empresa em ordem</b></div><p>Documentos, certidões e cadastro nas plataformas de compra em dia.</p></article>
+      <article class="no n3"><div class="cab"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 5.5 2 5.5 5.5"/></svg></span><b>Encontros Presenciais</b></div><p>Empresários na mesma sala com os mentores, ao longo do ano.</p></article>
+      <article class="no n4"><div class="cab"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M10 9l4 2-4 2z"/><path d="M8 21h8"/></svg></span><b>Masterclass</b></div><p>Toda terça, às 18h, um tema do mercado público com quem vive dele.</p></article>
+      <article class="no n5"><div class="cab"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></span><b>Mensagem das 7h</b></div><p>Todos os dias, uma mensagem dos mentores para começar o dia.</p></article>
+      <article class="no n6"><div class="cab"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></span><b>Legacy Talks e Legacy Magazine</b></div><p>Mentorados como convidados do podcast e na capa da revista.</p></article>
+    </div>
+    <p class="hub-pe">Radar com dados fictícios, só para ilustrar.</p>
+  </div>
+</section>
+
+<section class="faixa clara" aria-labelledby="titulo-quem">
+  <div class="wrap">
+    <div class="revela centro-txt">
+      <p class="olho"><b>03</b> <span class="losango"></span> Para quem é</p>
+      <div class="filete"></div>
+      <h2 id="titulo-quem">Para empresas em um destes três momentos.</h2>
+    </div>
+    <div class="tres">
+      <article class="momento revela"><small>Momento 1</small><h3>Vende bem no mercado privado</h3><p>E quer abrir o governo como um novo cliente, entrando com segurança desde a primeira disputa.</p></article>
+      <article class="momento revela r2"><small>Momento 2</small><h3>Já vende para o governo</h3><p>E quer disputar mais, escolher melhor as compras e vender com margem.</p></article>
+      <article class="momento revela r3"><small>Momento 3</small><h3>Entregou e não recebeu</h3><p>E precisa entender o que travou o pagamento e qual é o próximo passo.</p></article>
+    </div>
+
+    <div class="junto revela">
+      <div class="foto"><img src="/assets/img/fotos/lam-capa.webp" alt="Empresários reunidos num encontro do Legacy Business B2G" loading="lazy"></div>
+      <div class="txt">
+        <p class="olho">Quem entra <span class="losango"></span> faz parte</p>
+        <h3>Você não entra sozinho. <span>Entra para um grupo.</span></h3>
+        <p>No Legacy Business B2G, a sua empresa senta à mesa com outros empresários que vendem ao governo, aprende com quem já passou pelas mesmas disputas e conta com um time que conhece cada etapa desse mercado.</p>
       </div>
     </div>
   </div>
-  <a class="seta" href="#quem-somos" aria-label="Descer para conhecer o Legacy Business B2G"></a>
 </section>
 
-<section class="faixa clara marca" id="quem-somos" aria-labelledby="titulo-quem">
-  <div class="wrap quem-grid">
+<section class="faixa clara marca" aria-labelledby="titulo-conduz" style="padding-top:0">
+  <div class="wrap conduz">
     <div class="revela">
-      <p class="olho"><b>01</b> <span class="losango"></span> Quem somos</p>
+      <p class="olho"><b>04</b> <span class="losango"></span> Quem conduz</p>
       <div class="filete"></div>
-      <h2 id="titulo-quem">Uma mentoria com um assunto só, o mercado público.</h2>
-      <p class="abre">O Legacy Business B2G é uma mentoria de empresários dedicada a vender para o governo. Faz parte da Mentoring League Society e é conduzida por dois mentores principais, um do lado do governo e outro do lado da empresa.</p>
+      <h2 id="titulo-conduz">Dois mentores principais, um de cada lado da mesa.</h2>
+      <p class="abre">Um conhece o lado do governo. O outro conhece o lado da empresa. A mentoria faz parte da Mentoring League Society.</p>
       <div class="mls"><picture><source srcset="/assets/img/selos/selo-mls-navy.webp" type="image/webp"><img src="/assets/img/selos/selo-mls-navy.png" alt="Mentoring League Society" width="82" height="40" loading="lazy"></picture><span>Parte da Mentoring League Society</span></div>
     </div>
     <div class="mentores">
-      <article class="mentor revela r2"><div class="foto"><img src="/assets/img/pessoas/alberto-machado-640.webp" alt="Alberto Machado" loading="lazy"></div><div class="txt"><b>Alberto Machado</b><small>Mentor principal</small><p>Advogado. Fala do lado do governo, de edital, contrato, documento e das regras de cada compra.</p></div></article>
-      <article class="mentor revela r3"><div class="foto"><img src="/assets/img/pessoas/waldo-souza-640.webp" alt="Waldo Souza" loading="lazy"></div><div class="txt"><b>Waldo Souza</b><small>Mentor principal</small><p>Empresário e mentor de gestão. Fala do lado da empresa, de gestão, equipe, sócios e crescimento.</p></div></article>
+      <article class="mentor revela r2"><img src="/assets/img/pessoas/alberto-machado-320.webp" alt="Alberto Machado" width="84" height="84" loading="lazy"><div><b>Alberto Machado</b><small>Mentor principal</small><p>Advogado. Fala do lado do governo, de edital, contrato, documento e das regras de cada compra.</p></div></article>
+      <article class="mentor revela r3"><img src="/assets/img/pessoas/waldo-souza-320.webp" alt="Waldo Souza" width="84" height="84" loading="lazy"><div><b>Waldo Souza</b><small>Mentor principal</small><p>Empresário e mentor de gestão. Fala do lado da empresa, de gestão, equipe, sócios e crescimento.</p></div></article>
     </div>
-  </div>
-</section>
-
-<section class="faixa clara" aria-labelledby="titulo-como" style="padding-top:0">
-  <div class="wrap">
-    <div class="revela">
-      <p class="olho"><b>02</b> <span class="losango"></span> Como funciona</p>
-      <div class="filete"></div>
-      <p class="frase" id="titulo-como">Quem prepara é o Legacy Business B2G. <span>Quem executa é a Central.</span></p>
-    </div>
-    <div class="dois">
-      <article class="card revela"><p class="num">01</p><h3>Legacy Business B2G</h3><p class="papel">A mentoria que prepara</p><p>Com Alberto e Waldo, a empresa coloca em ordem documento, preço, equipe e gestão para vender ao governo, e aprende a decidir em quais compras vale entrar.</p></article>
-      <article class="card navy revela r2"><p class="num">02</p><h3>Central de Licitações</h3><p class="papel">O time que executa</p><p>Encontra as licitações abertas no Brasil inteiro que servem para a sua empresa, mostra o que falta para disputar cada uma e acompanha a empresa em cada disputa.</p></article>
-    </div>
-
-    <figure class="radar revela" aria-label="Exemplo ilustrativo do Radar de Oportunidades">
-      <div class="r-cab"><b>Radar de Oportunidades</b><span>É assim que a Central mostra as oportunidades de cada mentorado. Exemplo com dados fictícios.</span></div>
-      <div class="r-corpo">
-        <div class="r-nums">
-          <div class="r-num ok"><strong data-conta="3">3</strong><i>Verde</i><small>prontas para disputar hoje</small></div>
-          <div class="r-num at"><strong data-conta="2">2</strong><i>Amarelo</i><small>disputáveis depois de resolver uma pendência</small></div>
-          <div class="r-num fo"><strong data-conta="1">1</strong><i>Vermelho</i><small>fora do que a empresa entrega</small></div>
-        </div>
-        <div class="r-lista">
-          <div class="r-linha ok"><i></i><div class="r-o"><b>Manutenção predial de escolas</b><small>Pregão eletrônico · Prefeitura</small></div><div class="r-v"><b>R$ 1,4 mi</b><small>sessão em 9 dias</small></div></div>
-          <div class="r-linha ok"><i></i><div class="r-o"><b>Manutenção de unidades de saúde</b><small>Pregão eletrônico · Autarquia estadual</small></div><div class="r-v"><b>R$ 620 mil</b><small>sessão em 14 dias</small></div></div>
-          <div class="r-linha at"><i></i><div class="r-o"><b>Reforma de ala hospitalar</b><small>Concorrência · Hospital universitário</small><em>Falta um atestado compatível</em></div><div class="r-v"><b>R$ 2,3 mi</b><small>sessão em 21 dias</small></div></div>
-          <div class="r-linha at"><i></i><div class="r-o"><b>Manutenção de prédios administrativos</b><small>Pregão eletrônico · Prefeitura</small><em>Falta o cadastro na plataforma de compras</em></div><div class="r-v"><b>R$ 310 mil</b><small>sessão em 12 dias</small></div></div>
-          <div class="r-linha fo"><i></i><div class="r-o"><b>Fornecimento de mobiliário escolar</b><small>Pregão eletrônico · Secretaria estadual</small><em>Fora do que a empresa entrega</em></div><div class="r-v"><b>R$ 900 mil</b><small>sessão em 18 dias</small></div></div>
-        </div>
-      </div>
-      <figcaption class="r-pe"><span><b>A cor sai de seis pontos.</b> Objeto, documentos, atestado, estrutura, cadastro na plataforma e prazo.</span><span>Empresa de exemplo, manutenção predial</span></figcaption>
-    </figure>
   </div>
 </section>
 
 <section class="faixa escuro marca" id="diagnostico" aria-labelledby="titulo-diag">
   <div class="wrap diag-grid">
     <div class="revela">
-      <p class="olho"><b>03</b> <span class="losango"></span> Diagnóstico gratuito</p>
+      <p class="olho"><b>05</b> <span class="losango"></span> Diagnóstico gratuito</p>
       <div class="filete"></div>
       <h2 id="titulo-diag">Comece por uma conversa de 30 minutos.</h2>
       <p class="abre">Conte o que a sua empresa vende e onde atende. O time do Legacy Business B2G fala com você pelo WhatsApp, marca a conversa e mostra onde a sua empresa está hoje no mercado público.</p>
@@ -305,7 +406,7 @@ h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-
       <p class="contatos">Prefere falar agora? <a href="https://wa.me/5571999442586">WhatsApp (71) 99944-2586</a></p>
     </div>
 
-    <form class="form-unico revela r2" data-form-unico data-origem="site-previa-v2" data-variante="completa" action="/api/lead" method="post" novalidate>
+    <form class="form-unico revela r2" data-form-unico data-origem="site-previa-v3" data-variante="completa" action="/api/lead" method="post" novalidate>
       <h3 class="form-titulo">Agende o seu Diagnóstico gratuito</h3>
       <p class="form-sub">Sem custo e sem compromisso.</p>
       <p class="form-passo" data-form-passo hidden>Etapa 1 de 2</p>
@@ -369,10 +470,11 @@ h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-
 (function(){
   var reduz=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var estatico=/[?&]estatico/.test(location.search);
-  function conta(box){box.querySelectorAll('[data-conta]').forEach(function(el,i){if(reduz)return;var alvo=+el.getAttribute('data-conta'),n=0;el.textContent='0';setTimeout(function t(){n++;el.textContent=n;if(n<alvo)setTimeout(t,240);},300+i*160);});}
+  function conta(box){box.querySelectorAll('[data-conta]').forEach(function(el,i){if(reduz||estatico)return;var alvo=+el.getAttribute('data-conta'),n=0;el.textContent='0';setTimeout(function t(){n++;el.textContent=n;if(n<alvo)setTimeout(t,260);},700+i*180);});}
+  var card=document.querySelector('.rcard');if(card)conta(card);
   var alvos=document.querySelectorAll('.revela');
   if(estatico||!('IntersectionObserver' in window)){alvos.forEach(function(el){el.classList.add('visto');});return;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');if(e.target.classList.contains('radar'))conta(e.target);io.unobserve(e.target);}});},{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');io.unobserve(e.target);}});},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
   alvos.forEach(function(el){io.observe(el);});
 })();
 </script>
