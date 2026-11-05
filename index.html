@@ -106,10 +106,10 @@ h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;letter-spacing:-.022em;font
 
 /* tres passos */
 .passos{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
-.passos::before{content:"";position:absolute;left:8%;right:8%;top:34px;height:2px;background:var(--borda)}
-.passos::after{content:"";position:absolute;left:8%;top:34px;height:2px;width:0;background:var(--ouro);transition:width 1.8s var(--suave) .3s}
+.passos::before{content:"";position:absolute;left:8%;right:8%;top:50px;height:2px;background:var(--borda);z-index:0}
+.passos::after{content:"";position:absolute;left:8%;top:50px;height:2px;width:0;background:var(--ouro);z-index:0;transition:width 1.8s var(--suave) .3s}
 .passos.visto::after{width:84%}
-.passo{position:relative;background:#fff;border:1px solid var(--borda);border-radius:22px;padding:28px 28px 30px;transition:transform .5s var(--suave),box-shadow .5s var(--suave)}
+.passo{position:relative;z-index:1;background:#fff;border:1px solid var(--borda);border-radius:22px;padding:28px 28px 30px;transition:transform .5s var(--suave),box-shadow .5s var(--suave)}
 .passo:hover{transform:translateY(-4px);box-shadow:0 30px 50px -36px rgba(11,32,56,.45)}
 .passo .n{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--ouroc);font-weight:600;font-size:16px;margin-bottom:18px;position:relative;z-index:1}
 .passo h3{font-size:22px;font-weight:600}
@@ -272,7 +272,7 @@ h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;letter-spacing:-.022em;font
 
 <main id="conteudo">
 
-<section class="abertura escuro" aria-labelledby="titulo">
+<section class="abertura escuro" id="inicio" aria-labelledby="titulo">
   <div class="abertura-foto" aria-hidden="true"><img src="/assets/img/fotos/lam-capa.webp" alt=""></div>
   <div class="wrap ab-grid">
     <div>
@@ -326,7 +326,7 @@ h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;letter-spacing:-.022em;font
   </div>
 </section>
 
-<section class="faixa escuro" aria-labelledby="titulo-hub">
+<section class="faixa escuro" id="por-dentro" aria-labelledby="titulo-hub">
   <div class="wrap">
     <div class="revela centro-txt">
       <p class="olho"><b>02</b> <span class="losango"></span> O que acontece por dentro</p>
@@ -355,7 +355,7 @@ h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;letter-spacing:-.022em;font
   </div>
 </section>
 
-<section class="faixa clara" aria-labelledby="titulo-quem">
+<section class="faixa clara" id="para-quem" aria-labelledby="titulo-quem">
   <div class="wrap">
     <div class="revela centro-txt">
       <p class="olho"><b>03</b> <span class="losango"></span> Para quem é</p>
@@ -379,7 +379,7 @@ h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;letter-spacing:-.022em;font
   </div>
 </section>
 
-<section class="faixa clara marca" aria-labelledby="titulo-conduz" style="padding-top:0">
+<section class="faixa clara marca" id="quem-conduz" aria-labelledby="titulo-conduz" style="padding-top:0">
   <div class="wrap conduz">
     <div class="revela">
       <p class="olho"><b>04</b> <span class="losango"></span> Quem conduz</p>
