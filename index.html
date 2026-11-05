@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Legacy Business B2G | Mentoria para vender ao governo</title>
+<title>Legacy Business B2G | Mentoria para empresas que querem vender para o governo</title>
 <meta name="description" content="Mentoria do Legacy Business B2G para empresas que querem vender para o governo, conduzida por Alberto Machado e Waldo Souza.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0B2038">
@@ -15,170 +15,198 @@
 <style>
 @font-face{font-family:Inter;src:url(/assets/fontes/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Inter;src:url(/assets/fontes/inter-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
-:root{--navy:#0B2038;--navy2:#081A2E;--deep:#061222;--ouro:#E0C98F;--ouro2:#C9AE6E;--claro:#F4F1EA;--txt:#F6F5F2;--mut:#AAB6C4;--ok:#3FB37F;--at:#E6B547;--fo:#D9575C}
+:root{--navy:#0B2038;--navy2:#081A2E;--perola:#F4F1EA;--perola2:#F2EEE5;--borda:#E5E2DB;--t2:#44576D;--t3:#5A6B7D;--ouro:#7F6636;--ouroc:#E8D5A4;--ouroc2:#C9AE6E;--claro:#F6F5F2;--rod:#AEBED0;--ok:#2E8B5E;--at:#B9831C;--fo:#B6464B;--suave:cubic-bezier(.22,.7,.2,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--deep);color:var(--txt);line-height:1.5;-webkit-font-smoothing:antialiased}
+body{font-family:Inter,Arial,sans-serif;background:var(--perola);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 img{display:block;max-width:100%}
-.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
-.pular{position:absolute;left:-999px}.pular:focus{left:16px;top:16px;z-index:99;background:var(--ouro);color:var(--deep);padding:8px 14px;border-radius:8px}
+.wrap{width:min(1120px,100% - 48px);margin-inline:auto}
+.pular{position:absolute;left:-999px}.pular:focus{left:16px;top:16px;z-index:99;background:var(--ouroc);color:var(--navy);padding:8px 14px;border-radius:8px}
+.olho{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ouro)}
+.olho b{font-weight:600;color:var(--ouro)}
+.escuro .olho,.escuro .olho b{color:var(--ouroc2)}
+.filete{width:56px;height:2px;background:var(--ouro);margin:20px 0 26px}
+.escuro .filete{background:var(--ouroc2)}
+.losango{display:inline-block;width:7px;height:7px;background:currentColor;transform:rotate(45deg);margin:0 2px}
+h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-weight:600;max-width:20ch}
+.abre{font-size:clamp(17px,1.5vw,19px);color:var(--t2);max-width:620px;margin-top:18px}
+.escuro .abre{color:#D3DAE3}
 
 /* topo */
-.topo{position:absolute;inset:0 0 auto 0;z-index:5;padding:22px 0}
+.topo{position:absolute;inset:0 0 auto 0;z-index:5;padding:26px 0}
 .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.topo img{height:40px;width:auto}
-.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s}
-.btn-p{background:linear-gradient(135deg,#F0DDA8,var(--ouro2));color:var(--deep);padding:16px 28px;font-size:17px;box-shadow:0 10px 30px -10px rgba(224,201,143,.55)}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(224,201,143,.75)}
-.btn-p svg{transition:transform .25s}.btn-p:hover svg{transform:translateX(4px)}
-.btn-g{border:1px solid rgba(224,201,143,.45);color:var(--ouro);padding:10px 18px;font-size:14px}
-.btn-g:hover{background:rgba(224,201,143,.1)}
+.topo img{height:42px;width:auto}
+.link-topo{font-size:14px;font-weight:600;color:var(--ouroc);text-decoration:none;border-bottom:1px solid rgba(232,213,164,.45);padding-bottom:2px;transition:border-color .3s}
+.link-topo:hover{border-color:var(--ouroc)}
 
-/* hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:120px 0 56px;isolation:isolate}
-.hero-fundo{position:absolute;inset:0;z-index:-2}
-.hero-fundo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:zoom 26s ease-in-out infinite alternate;opacity:.42}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(120% 90% at 85% 40%,rgba(24,64,104,.35),transparent 60%),linear-gradient(90deg,rgba(6,18,34,.97) 0%,rgba(6,18,34,.86) 45%,rgba(6,18,34,.7) 100%),linear-gradient(0deg,var(--deep) 0%,transparent 35%)}
-.hero::after{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-200px;z-index:-1;background:radial-gradient(circle,rgba(224,201,143,.10),transparent 60%);animation:respira 9s ease-in-out infinite}
-.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
-.olho{display:inline-flex;align-items:center;gap:10px;color:var(--ouro);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
-.olho i{width:8px;height:8px;border-radius:50%;background:var(--ouro);box-shadow:0 0 0 0 rgba(224,201,143,.6);animation:ping 2.2s infinite}
-h1{font-size:clamp(38px,5.2vw,68px);line-height:1.04;letter-spacing:-.025em;font-weight:600;margin:20px 0 22px}
-h1 em{font-style:normal;background:linear-gradient(100deg,#F3E2B4 0%,var(--ouro2) 50%,#F3E2B4 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:brilho 6s linear infinite}
-.lead{font-size:clamp(18px,1.6vw,21px);color:#D5DCE5;max-width:560px}
-.central{margin:26px 0 34px;padding-left:18px;border-left:2px solid var(--ouro2);font-size:17px;color:var(--txt);max-width:520px}
-.central b{color:var(--ouro);font-weight:600}
-.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:18px}
-.acoes small{color:var(--mut);font-size:14px}
-.quem{display:flex;align-items:center;gap:22px;margin-top:44px;flex-wrap:wrap}
+/* abertura */
+.abertura{position:relative;min-height:94svh;display:flex;align-items:flex-end;overflow:hidden;color:var(--claro);background:var(--navy);isolation:isolate;padding:140px 0 72px}
+.abertura-foto{position:absolute;inset:0;z-index:-2}
+.abertura-foto img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.04);animation:aproxima 30s var(--suave) forwards}
+.abertura::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,32,56,.45) 0%,rgba(11,32,56,.72) 45%,rgba(11,32,56,.96) 82%,#0B2038 100%),linear-gradient(90deg,rgba(11,32,56,.7) 0%,rgba(11,32,56,.15) 70%)}
+.abertura h1{font-size:clamp(38px,5.6vw,72px);line-height:1.04;letter-spacing:-.028em;font-weight:600;max-width:15ch;margin-top:22px}
+.abertura h1 span{color:var(--ouroc)}
+.abertura .sub{font-size:clamp(17px,1.6vw,20px);color:#D9DFE6;max-width:600px;margin-top:24px}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:38px}
+.btn{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:16px 28px;background:var(--ouroc);color:var(--navy);transition:transform .35s var(--suave),background .35s}
+.btn:hover{transform:translateY(-2px);background:#F0E1B8}
+.btn svg{transition:transform .35s var(--suave)}.btn:hover svg{transform:translateX(4px)}
+.quem{display:flex;align-items:center;gap:14px}
 .rostos{display:flex}
-.rostos img{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--deep);box-shadow:0 0 0 1px rgba(224,201,143,.5)}
-.rostos img+img{margin-left:-14px}
-.quem p{font-size:15px;color:#D5DCE5;line-height:1.35}
-.quem p span{display:block;color:var(--mut);font-size:13px}
-.mls{display:flex;align-items:center;gap:10px;padding-left:22px;border-left:1px solid rgba(255,255,255,.14);color:var(--mut);font-size:13px}
-.mls img{height:34px;width:auto;opacity:.9}
+.rostos img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--navy)}
+.rostos img+img{margin-left:-12px}
+.quem p{font-size:14.5px;line-height:1.35;color:#E3E7EC}
+.quem p span{display:block;font-size:13px;color:var(--rod)}
+.seta{position:absolute;left:50%;bottom:22px;width:22px;height:34px;margin-left:-11px;border:1.5px solid rgba(232,213,164,.5);border-radius:12px}
+.seta::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--ouroc);animation:desce 2.4s var(--suave) infinite}
 
-/* entrada */
-.entra{opacity:0;transform:translateY(22px);animation:sobe .9s cubic-bezier(.2,.7,.2,1) forwards}
-.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}.d5{animation-delay:.7s}.d6{animation-delay:.5s}
+/* faixas */
+.faixa{position:relative;padding:110px 0;overflow:hidden}
+.faixa.clara{background:linear-gradient(180deg,var(--perola),var(--perola2))}
+.faixa.escuro{background:var(--navy);color:var(--claro)}
+.marca::after{content:"";position:absolute;right:-140px;top:60px;width:560px;height:560px;background:url(/assets/img/logo/simbolo-ouro-reforcado.svg) no-repeat center/contain;opacity:.06;pointer-events:none;z-index:0}
+.faixa>.wrap{position:relative;z-index:1}
+
+/* quem somos */
+.quem-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.mentores{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mentor{background:#fff;border:1px solid var(--borda);border-radius:20px;overflow:hidden;transition:transform .5s var(--suave),box-shadow .5s var(--suave)}
+.mentor:hover{transform:translateY(-4px);box-shadow:0 30px 50px -34px rgba(11,32,56,.45)}
+.mentor .foto{aspect-ratio:4/5;overflow:hidden;background:var(--perola2)}
+.mentor .foto img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s var(--suave)}
+.mentor:hover .foto img{transform:scale(1.04)}
+.mentor div.txt{padding:18px 20px 22px}
+.mentor b{display:block;font-size:17px;font-weight:600}
+.mentor small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro);font-weight:600;margin:4px 0 10px}
+.mentor p{font-size:14.5px;color:var(--t2);line-height:1.55}
+.mls{display:flex;align-items:center;gap:14px;margin-top:30px;font-size:14px;color:var(--t3)}
+.mls img{height:40px;width:auto}
+
+/* como funciona */
+.frase{font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.02em;font-weight:600;max-width:24ch}
+.frase span{color:var(--ouro)}
+.dois{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:46px}
+.card{background:#fff;border:1px solid var(--borda);border-radius:20px;padding:30px 30px 32px}
+.card .num{font-size:13px;font-weight:600;color:var(--ouro);letter-spacing:.12em}
+.card h3{font-size:22px;font-weight:600;margin:10px 0 4px}
+.card .papel{font-size:15px;color:var(--ouro);font-weight:600;margin-bottom:12px}
+.card p{font-size:15.5px;color:var(--t2)}
+.card.navy{background:var(--navy);border-color:var(--navy);color:var(--claro)}
+.card.navy .num,.card.navy .papel{color:var(--ouroc)}
+.card.navy p{color:#D3DAE3}
 
 /* radar */
-.radar{position:relative;background:linear-gradient(160deg,rgba(17,44,74,.92),rgba(8,26,46,.96));border:1px solid rgba(224,201,143,.22);border-radius:22px;box-shadow:0 40px 90px -30px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.06);overflow:hidden;backdrop-filter:blur(8px)}
-.radar::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(224,201,143,.07) 50%,transparent 60%);background-size:250% 100%;animation:reflexo 7s ease-in-out infinite}
-.r-barra{display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);font-size:12px;color:var(--mut);letter-spacing:.04em}
-.r-barra i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.16)}
-.r-barra span{margin-left:8px}
-.r-vivo{margin-left:auto;display:inline-flex;align-items:center;gap:7px;color:var(--ok);font-weight:600}
-.r-vivo:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);animation:pisca 1.6s infinite}
-.r-corpo{padding:20px 20px 16px}
-.r-topo{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}
-.r-topo b{display:block;font-size:17px}
-.r-topo small{color:var(--mut);font-size:13px}
-.r-selo{font-size:11px;color:var(--ouro);border:1px solid rgba(224,201,143,.35);border-radius:999px;padding:5px 10px;white-space:nowrap}
-.r-meio{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;margin-bottom:16px}
-.r-mapa svg{width:150px;height:150px;display:block}
-.r-anel{fill:none;stroke:rgba(224,201,143,.18);stroke-width:1}
-.r-eixo{stroke:rgba(224,201,143,.1);stroke-width:1}
-.r-varre{transform-origin:140px 140px;animation:gira 4s linear infinite}
-.r-pt{opacity:.25;transform-box:fill-box;transform-origin:center;animation:blip 4s linear infinite}
-.r-pt.ok{fill:var(--ok)}.r-pt.at{fill:var(--at)}.r-pt.fo{fill:var(--fo)}
-.r-nums{display:grid;gap:8px}
-.r-num{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06)}
-.r-num b{font-size:26px;line-height:1;min-width:24px;font-weight:600}
-.r-num small{font-size:13px;color:#C9D2DD;line-height:1.25}
-.r-num.ok b{color:var(--ok)}.r-num.at b{color:var(--at)}.r-num.fo b{color:var(--fo)}
-.r-lista{display:grid;gap:7px}
-.r-linha{display:grid;grid-template-columns:4px 1fr auto;gap:12px;align-items:center;padding:10px 12px 10px 0;border-radius:10px;background:rgba(255,255,255,.03);opacity:0;transform:translateX(18px);animation:entraL .6s cubic-bezier(.2,.7,.2,1) forwards}
-.r-linha:nth-child(1){animation-delay:1.1s}.r-linha:nth-child(2){animation-delay:1.25s}.r-linha:nth-child(3){animation-delay:1.4s}.r-linha:nth-child(4){animation-delay:1.55s}.r-linha:nth-child(5){animation-delay:1.7s}
-.r-linha>i{height:100%;border-radius:0 4px 4px 0}
+.radar{margin-top:20px;background:#fff;border:1px solid var(--borda);border-radius:24px;overflow:hidden}
+.r-cab{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;padding:24px 30px 20px;border-bottom:1px solid var(--borda)}
+.r-cab::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--ouro)}
+.visto .r-cab::after{animation:le 2.2s var(--suave) .2s forwards}
+.r-cab b{font-size:18px;font-weight:600}
+.r-cab span{font-size:14px;color:var(--t3)}
+.r-corpo{display:grid;grid-template-columns:260px 1fr;gap:0}
+.r-nums{padding:26px 30px;border-right:1px solid var(--borda);display:grid;gap:18px;align-content:start;background:linear-gradient(180deg,#fff,var(--perola))}
+.r-num{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center}
+.r-num strong{font-size:40px;line-height:1;font-weight:600;grid-row:span 2}
+.r-num.ok strong{color:var(--ok)}.r-num.at strong{color:var(--at)}.r-num.fo strong{color:var(--fo)}
+.r-num i{font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.r-num.ok i{color:var(--ok)}.r-num.at i{color:var(--at)}.r-num.fo i{color:var(--fo)}
+.r-num small{font-size:14px;color:var(--t2);line-height:1.35}
+.r-lista{padding:10px 0}
+.r-linha{display:grid;grid-template-columns:4px 1fr auto;gap:18px;align-items:center;padding:14px 30px 14px 26px;border-bottom:1px solid #EFECE5;opacity:0;transform:translateY(10px);transition:opacity .7s var(--suave),transform .7s var(--suave)}
+.r-linha:last-child{border-bottom:0}
+.visto .r-linha{opacity:1;transform:none}
+.visto .r-linha:nth-child(1){transition-delay:.35s}.visto .r-linha:nth-child(2){transition-delay:.5s}.visto .r-linha:nth-child(3){transition-delay:.65s}.visto .r-linha:nth-child(4){transition-delay:.8s}.visto .r-linha:nth-child(5){transition-delay:.95s}
+.r-linha>i{align-self:stretch;border-radius:4px}
 .r-linha.ok>i{background:var(--ok)}.r-linha.at>i{background:var(--at)}.r-linha.fo>i{background:var(--fo)}
-.r-o b{display:block;font-size:14px;font-weight:600;line-height:1.3}
-.r-o small{font-size:12px;color:var(--mut)}
-.r-o em{font-style:normal;display:inline-block;margin-top:4px;font-size:11.5px;color:var(--at);background:rgba(230,181,71,.1);border-radius:6px;padding:2px 7px}
-.r-linha.fo .r-o em{color:var(--fo);background:rgba(217,87,92,.1)}
+.r-o b{display:block;font-size:15px;font-weight:600;line-height:1.35}
+.r-o small{font-size:13px;color:var(--t3)}
+.r-o em{display:block;font-style:normal;font-size:13px;margin-top:3px}
+.r-linha.at .r-o em{color:var(--at)}.r-linha.fo .r-o em{color:var(--fo)}
 .r-v{text-align:right}
-.r-v b{display:block;font-size:14px;font-weight:600}
-.r-v small{font-size:12px;color:var(--mut);white-space:nowrap}
-.r-pe{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07);font-size:12px;color:var(--mut)}
-.r-pe b{color:#D5DCE5;font-weight:600}
-.legenda{margin-top:12px;font-size:12.5px;color:var(--mut);text-align:center}
+.r-v b{display:block;font-size:15px;font-weight:600}
+.r-v small{font-size:13px;color:var(--t3);white-space:nowrap}
+.r-pe{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;padding:16px 30px;border-top:1px solid var(--borda);background:var(--perola);font-size:13.5px;color:var(--t3)}
+.r-pe b{color:var(--navy);font-weight:600}
 
 /* diagnostico */
-.diag{position:relative;padding:110px 0 90px;background:linear-gradient(180deg,var(--deep),var(--navy2))}
 .diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.diag h2{font-size:clamp(32px,3.6vw,48px);line-height:1.08;letter-spacing:-.02em;font-weight:600;margin-bottom:18px}
-.diag h2 em{font-style:normal;color:var(--ouro)}
-.diag .lead{margin-bottom:30px}
-.compromisso{margin-top:34px;padding:22px 24px;border-radius:16px;background:rgba(224,201,143,.06);border:1px solid rgba(224,201,143,.18);font-size:16px;color:#E6E1D4}
-.compromisso b{display:block;color:var(--ouro);font-size:18px;margin-bottom:6px;font-weight:600}
-.revela{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.revela.visto{opacity:1;transform:none}
+.nota{margin-top:34px;padding:4px 0 4px 20px;border-left:2px solid var(--ouroc2);font-size:15.5px;color:#D3DAE3;max-width:520px}
+.nota b{display:block;color:var(--ouroc);font-weight:600;font-size:17px;margin-bottom:4px}
+.contatos{margin-top:30px;font-size:14.5px;color:var(--rod)}
+.contatos a{color:var(--ouroc);text-decoration:none}
 
 /* formulario */
-.form-unico{background:var(--claro);color:#0B2038;border-radius:22px;padding:30px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.form-unico{background:var(--perola);color:var(--navy);border-radius:24px;padding:32px}
 .form-titulo{font-size:22px;font-weight:600}
-.form-sub{color:#4E5B6B;font-size:15px;margin:4px 0 20px}
-.form-passo{font-size:13px;color:#735A2C;font-weight:600;margin-bottom:10px}
+.form-sub{color:var(--t2);font-size:15px;margin:4px 0 22px}
+.form-passo{font-size:13px;color:var(--ouro);font-weight:600;margin-bottom:10px}
 .campo{margin-bottom:16px}
 .campo label,.campo legend{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
-.campo input[type=text],.campo input[type=tel],.campo input[type=email],.campo textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid #CDC6B6;background:#fff;color:#0B2038;transition:border-color .2s,box-shadow .2s}
-.campo input:focus,.campo textarea:focus{outline:none;border-color:#B08F4A;box-shadow:0 0 0 3px rgba(201,174,110,.3)}
+.campo input[type=text],.campo input[type=tel],.campo input[type=email],.campo textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid #D6CFBF;background:#fff;color:var(--navy);transition:border-color .25s,box-shadow .25s}
+.campo input:focus,.campo textarea:focus{outline:none;border-color:var(--ouro);box-shadow:0 0 0 3px rgba(127,102,54,.18)}
 .campo fieldset{border:0}
 .opcoes{display:grid;gap:8px}
-.opcao{display:flex!important;gap:10px;align-items:center;font-weight:400!important;padding:11px 13px;border:1px solid #CDC6B6;border-radius:12px;background:#fff;cursor:pointer}
-.aceite{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;font-size:13.5px!important;color:#3A4757}
+.opcao{display:flex!important;gap:10px;align-items:center;font-weight:400!important;padding:11px 13px;border:1px solid #D6CFBF;border-radius:12px;background:#fff;cursor:pointer}
+.aceite{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;font-size:13.5px!important;color:var(--t2)}
 .aceite input{margin-top:3px}
 .aceite-opcional{margin-top:8px}
 .erro-campo,.form-erro{color:#B23A3F;font-size:13px;margin-top:5px}
-.btn-form{width:100%;justify-content:center;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:17px;padding:16px;border-radius:999px;background:var(--navy);color:var(--ouro);margin-top:6px;transition:background .25s,transform .25s}
+.btn-form{width:100%;display:flex;justify-content:center;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:17px;padding:16px;border-radius:999px;background:var(--navy);color:var(--ouroc);margin-top:6px;transition:background .3s,transform .3s var(--suave)}
 .btn-form:hover{background:#12304F;transform:translateY(-1px)}
-.form-obs{font-size:12.5px;color:#5E6A79;margin-top:14px}
+.form-obs{font-size:12.5px;color:var(--t3);margin-top:14px}
 .campo-mel{position:absolute;left:-9999px}
 
 /* rodape */
-.rodape{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);padding:34px 0;font-size:13.5px;color:var(--mut)}
+.rodape{background:var(--navy2);padding:34px 0;font-size:13.5px;color:var(--rod)}
 .rodape .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
 .rodape img{height:30px;width:auto}
 .rodape nav{display:flex;gap:18px;flex-wrap:wrap}
-.rodape a{text-decoration:none}.rodape a:hover{color:var(--ouro)}
+.rodape a{text-decoration:none}.rodape a:hover{color:var(--ouroc)}
 .rodape .aviso{flex-basis:100%;font-size:12.5px}
-.cookies{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:620px;margin-inline:auto;background:#0E2846;border:1px solid rgba(224,201,143,.25);border-radius:16px;padding:16px 18px;font-size:13.5px;color:#D5DCE5;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cookies{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:620px;margin-inline:auto;background:var(--navy);border:1px solid rgba(232,213,164,.3);border-radius:16px;padding:16px 18px;font-size:13.5px;color:#D3DAE3;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .cookies[hidden]{display:none}
 .cookies-botoes{display:flex;gap:8px;margin-left:auto}
-.cookies button{font:inherit;font-size:13px;border-radius:999px;padding:8px 14px;cursor:pointer;border:1px solid rgba(224,201,143,.4);background:transparent;color:var(--ouro)}
-.cookies button[data-cookies-aceitar]{background:var(--ouro);color:var(--deep);border-color:var(--ouro)}
+.cookies button{font:inherit;font-size:13px;border-radius:999px;padding:8px 14px;cursor:pointer;border:1px solid rgba(232,213,164,.45);background:transparent;color:var(--ouroc)}
+.cookies button[data-cookies-aceitar]{background:var(--ouroc);color:var(--navy);border-color:var(--ouroc)}
 
-@keyframes zoom{from{transform:scale(1.04)}to{transform:scale(1.14) translateX(-2%)}}
-@keyframes respira{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
-@keyframes ping{0%{box-shadow:0 0 0 0 rgba(224,201,143,.6)}80%,100%{box-shadow:0 0 0 12px rgba(224,201,143,0)}}
-@keyframes brilho{to{background-position:200% center}}
+/* movimento */
+.entra{opacity:0;transform:translateY(24px);animation:sobe 1.1s var(--suave) forwards}
+.d1{animation-delay:.15s}.d2{animation-delay:.3s}.d3{animation-delay:.5s}.d4{animation-delay:.7s}
+.js .revela{opacity:0;transform:translateY(30px);transition:opacity 1s var(--suave),transform 1s var(--suave)}
+.js .revela.visto{opacity:1;transform:none}
+.js .revela.r2{transition-delay:.15s}.js .revela.r3{transition-delay:.3s}
+@keyframes aproxima{to{transform:scale(1.12)}}
 @keyframes sobe{to{opacity:1;transform:none}}
-@keyframes entraL{to{opacity:1;transform:none}}
-@keyframes gira{to{transform:rotate(360deg)}}
-@keyframes blip{0%{opacity:1;transform:scale(1.7)}12%{opacity:1;transform:scale(1)}70%{opacity:.35}100%{opacity:.25}}
-@keyframes pisca{0%,100%{opacity:1}50%{opacity:.25}}
-@keyframes reflexo{0%,100%{background-position:120% 0}50%{background-position:-20% 0}}
+@keyframes desce{0%{opacity:0;transform:translateY(0)}30%{opacity:1}80%,100%{opacity:0;transform:translateY(12px)}}
+@keyframes le{to{width:100%}}
 
-@media (max-width:980px){
-.hero-grid,.diag-grid{grid-template-columns:1fr;gap:40px}
-.hero{padding-top:108px}
-.topo .btn-g{display:none}
+@media (max-width:960px){
+.quem-grid,.diag-grid,.dois{grid-template-columns:1fr;gap:36px}
+.r-corpo{grid-template-columns:1fr}
+.r-nums{border-right:0;border-bottom:1px solid var(--borda);grid-template-columns:repeat(3,1fr)}
+.r-num{grid-template-columns:1fr}
+.r-num strong{grid-row:auto}
+.faixa{padding:84px 0}
 }
-@media (max-width:520px){
+@media (max-width:560px){
 .wrap{width:calc(100% - 32px)}
-.r-meio{grid-template-columns:1fr}
-.r-mapa{display:flex;justify-content:center}
-.r-linha{grid-template-columns:4px 1fr}
+.link-topo{display:none}
+.mentores{gap:12px}
+.mentor div.txt{padding:14px}
+.mentor p{font-size:13.5px}
+.r-nums{grid-template-columns:1fr;gap:14px;padding:22px}
+.r-num{grid-template-columns:auto 1fr}
+.r-num strong{grid-row:span 2;font-size:32px}
+.r-linha{grid-template-columns:4px 1fr;padding:14px 20px 14px 16px}
 .r-v{grid-column:2;text-align:left;display:flex;gap:10px;align-items:baseline}
-.mls{padding-left:0;border-left:0}
-.form-unico{padding:22px}
+.r-cab,.r-pe{padding-left:20px;padding-right:20px}
+.card,.form-unico{padding:24px}
+.abertura{padding-bottom:84px}
 }
 @media (prefers-reduced-motion:reduce){
 *,*::before,*::after{animation:none!important;transition:none!important}
-.entra,.r-linha,.revela{opacity:1!important;transform:none!important}
-.r-pt{opacity:1}
+.entra,.js .revela,.r-linha{opacity:1!important;transform:none!important}
+.r-cab::after{width:100%}
 }
 </style>
 </head>
@@ -188,89 +216,90 @@ h1 em{font-style:normal;background:linear-gradient(100deg,#F3E2B4 0%,var(--ouro2
 <header class="topo">
   <div class="wrap">
     <a href="/" aria-label="Legacy Business B2G, página inicial"><img src="/assets/img/logo/marca-horizontal-ouro.svg" alt="Legacy Business B2G" width="210" height="48"></a>
-    <a class="btn btn-g" href="#diagnostico">Diagnóstico gratuito</a>
+    <a class="link-topo" href="#diagnostico">Diagnóstico gratuito</a>
   </div>
 </header>
 
 <main id="conteudo">
 
-<section class="hero" aria-labelledby="titulo">
-  <div class="hero-fundo" aria-hidden="true"><picture><source media="(min-width:800px)" type="image/webp" srcset="/assets/img/fotos/dupla-plenaria-fundo-1280.webp"><img src="/assets/img/fotos/dupla-plenaria-fundo-720.webp" alt="" width="1280" height="1920"></picture></div>
-  <div class="wrap hero-grid">
-    <div>
-      <p class="olho entra d1"><i></i>Mentoria do mercado público</p>
-      <h1 id="titulo" class="entra d2">Mentoria para empresas que querem <em>vender para o governo.</em></h1>
-      <p class="lead entra d3">Alberto Machado e Waldo Souza, mentores principais, conduzem a sua empresa no mercado público, do edital ao recebimento.</p>
-      <p class="central entra d4"><b>Quem prepara é o Legacy Business B2G.</b> Quem executa é a Central.</p>
-      <div class="acoes entra d5">
-        <a class="btn btn-p" href="#diagnostico">Agende o Diagnóstico gratuito <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <small>Sem custo e sem compromisso.</small>
-      </div>
-      <div class="quem entra d5">
-        <div class="rostos"><img src="/assets/img/pessoas/alberto-machado-320.webp" alt="Alberto Machado" width="54" height="54"><img src="/assets/img/pessoas/waldo-souza-320.webp" alt="Waldo Souza" width="54" height="54"></div>
+<section class="abertura escuro" aria-labelledby="titulo">
+  <div class="abertura-foto" aria-hidden="true"><img src="/assets/img/fotos/lam-capa.webp" alt=""></div>
+  <div class="wrap">
+    <p class="olho entra d1">Legacy Business B2G <span class="losango"></span> Mentoria do mercado público</p>
+    <h1 id="titulo" class="entra d2">Mentoria para empresas que querem <span>vender para o governo.</span></h1>
+    <p class="sub entra d3">Prefeituras, estados e órgãos federais compram de empresas privadas por licitação e publicam cada compra antes de fazê-la. O Legacy Business B2G prepara a sua empresa para entrar nessas compras, com método e com quem conhece esse mercado.</p>
+    <div class="acoes entra d4">
+      <a class="btn" href="#diagnostico">Agende o Diagnóstico gratuito <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="quem">
+        <div class="rostos"><img src="/assets/img/pessoas/alberto-machado-320.webp" alt="Alberto Machado" width="48" height="48"><img src="/assets/img/pessoas/waldo-souza-320.webp" alt="Waldo Souza" width="48" height="48"></div>
         <p>Alberto Machado e Waldo Souza<span>Mentores principais</span></p>
-        <div class="mls"><picture><source srcset="/assets/img/selos/selo-mls-branco.webp" type="image/webp"><img src="/assets/img/selos/selo-mls-branco.png" alt="Mentoring League Society" width="70" height="34"></picture><span>Membro da Mentoring League Society</span></div>
       </div>
     </div>
+  </div>
+  <a class="seta" href="#quem-somos" aria-label="Descer para conhecer o Legacy Business B2G"></a>
+</section>
 
-    <figure class="entra d6">
-      <div class="radar" role="img" aria-label="Exemplo ilustrativo do Radar de Oportunidades, com oportunidades do Brasil inteiro separadas em prontas para disputar, disputáveis depois de uma pendência e fora do que a empresa entrega">
-        <div class="r-barra"><i></i><i></i><i></i><span>Radar de Oportunidades</span><span class="r-vivo">Lendo</span></div>
-        <div class="r-corpo">
-          <div class="r-topo">
-            <div><b>Sua empresa</b><small>Manutenção predial</small></div>
-            <span class="r-selo">Brasil inteiro, em tudo o que você vende</span>
-          </div>
-          <div class="r-meio">
-            <div class="r-mapa">
-              <svg viewBox="0 0 280 280" aria-hidden="true">
-                <defs>
-                  <radialGradient id="rf" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#184068" stop-opacity=".7"/><stop offset="1" stop-color="#184068" stop-opacity="0"/></radialGradient>
-                  <linearGradient id="rv" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#E0C98F" stop-opacity="0"/><stop offset="1" stop-color="#E0C98F" stop-opacity=".42"/></linearGradient>
-                </defs>
-                <circle cx="140" cy="140" r="128" fill="url(#rf)"/>
-                <line class="r-eixo" x1="12" y1="140" x2="268" y2="140"/><line class="r-eixo" x1="140" y1="12" x2="140" y2="268"/>
-                <circle class="r-anel" cx="140" cy="140" r="40"/><circle class="r-anel" cx="140" cy="140" r="80"/><circle class="r-anel" cx="140" cy="140" r="120"/>
-                <g class="r-varre"><path d="M140 140 L140 20 A120 120 0 0 1 217.1 48.1 Z" fill="url(#rv)"/><line x1="140" y1="140" x2="217.1" y2="48.1" stroke="#E0C98F" stroke-opacity=".7" stroke-width="1.5"/></g>
-                <circle class="r-pt ok" cx="170" cy="88" r="7" style="animation-delay:-.11s"/>
-                <circle class="r-pt ok" cx="236.6" cy="114.1" r="7" style="animation-delay:.39s"/>
-                <circle class="r-pt ok" cx="168.9" cy="174.5" r="7" style="animation-delay:1.11s"/>
-                <circle class="r-pt at" cx="109.2" cy="224.6" r="7" style="animation-delay:1.78s"/>
-                <circle class="r-pt at" cx="72.4" cy="158.1" r="7" style="animation-delay:2.39s"/>
-                <circle class="r-pt fo" cx="69.3" cy="55.7" r="7" style="animation-delay:3.11s"/>
-                <circle cx="140" cy="140" r="5" fill="#E0C98F"/>
-              </svg>
-            </div>
-            <div class="r-nums">
-              <div class="r-num ok"><b data-conta="3">3</b><small>prontas para disputar hoje</small></div>
-              <div class="r-num at"><b data-conta="2">2</b><small>disputáveis depois de resolver uma pendência</small></div>
-              <div class="r-num fo"><b data-conta="1">1</b><small>fora do que a empresa entrega</small></div>
-            </div>
-          </div>
-          <div class="r-lista">
-            <div class="r-linha ok"><i></i><div class="r-o"><b>Manutenção predial de escolas</b><small>Pregão eletrônico · Prefeitura</small></div><div class="r-v"><b>R$ 1,4 mi</b><small>sessão em 9 dias</small></div></div>
-            <div class="r-linha ok"><i></i><div class="r-o"><b>Manutenção de unidades de saúde</b><small>Pregão eletrônico · Autarquia estadual</small></div><div class="r-v"><b>R$ 620 mil</b><small>sessão em 14 dias</small></div></div>
-            <div class="r-linha at"><i></i><div class="r-o"><b>Reforma de ala hospitalar</b><small>Concorrência · Hospital universitário</small><br><em>Falta um atestado compatível</em></div><div class="r-v"><b>R$ 2,3 mi</b><small>sessão em 21 dias</small></div></div>
-            <div class="r-linha at"><i></i><div class="r-o"><b>Manutenção de prédios administrativos</b><small>Pregão eletrônico · Prefeitura</small><br><em>Falta o cadastro na plataforma</em></div><div class="r-v"><b>R$ 310 mil</b><small>sessão em 12 dias</small></div></div>
-            <div class="r-linha fo"><i></i><div class="r-o"><b>Fornecimento de mobiliário escolar</b><small>Pregão eletrônico · Secretaria estadual</small><br><em>Fora do que a empresa entrega</em></div><div class="r-v"><b>R$ 900 mil</b><small>sessão em 18 dias</small></div></div>
-          </div>
-          <p class="r-pe"><b>O sinal sai de seis pontos.</b> Objeto, documentos, atestado, estrutura, cadastro na plataforma e prazo.</p>
+<section class="faixa clara marca" id="quem-somos" aria-labelledby="titulo-quem">
+  <div class="wrap quem-grid">
+    <div class="revela">
+      <p class="olho"><b>01</b> <span class="losango"></span> Quem somos</p>
+      <div class="filete"></div>
+      <h2 id="titulo-quem">Uma mentoria com um assunto só, o mercado público.</h2>
+      <p class="abre">O Legacy Business B2G é uma mentoria de empresários dedicada a vender para o governo. Faz parte da Mentoring League Society e é conduzida por dois mentores principais, um do lado do governo e outro do lado da empresa.</p>
+      <div class="mls"><picture><source srcset="/assets/img/selos/selo-mls-navy.webp" type="image/webp"><img src="/assets/img/selos/selo-mls-navy.png" alt="Mentoring League Society" width="82" height="40" loading="lazy"></picture><span>Parte da Mentoring League Society</span></div>
+    </div>
+    <div class="mentores">
+      <article class="mentor revela r2"><div class="foto"><img src="/assets/img/pessoas/alberto-machado-640.webp" alt="Alberto Machado" loading="lazy"></div><div class="txt"><b>Alberto Machado</b><small>Mentor principal</small><p>Advogado. Fala do lado do governo, de edital, contrato, documento e das regras de cada compra.</p></div></article>
+      <article class="mentor revela r3"><div class="foto"><img src="/assets/img/pessoas/waldo-souza-640.webp" alt="Waldo Souza" loading="lazy"></div><div class="txt"><b>Waldo Souza</b><small>Mentor principal</small><p>Empresário e mentor de gestão. Fala do lado da empresa, de gestão, equipe, sócios e crescimento.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="faixa clara" aria-labelledby="titulo-como" style="padding-top:0">
+  <div class="wrap">
+    <div class="revela">
+      <p class="olho"><b>02</b> <span class="losango"></span> Como funciona</p>
+      <div class="filete"></div>
+      <p class="frase" id="titulo-como">Quem prepara é o Legacy Business B2G. <span>Quem executa é a Central.</span></p>
+    </div>
+    <div class="dois">
+      <article class="card revela"><p class="num">01</p><h3>Legacy Business B2G</h3><p class="papel">A mentoria que prepara</p><p>Com Alberto e Waldo, a empresa coloca em ordem documento, preço, equipe e gestão para vender ao governo, e aprende a decidir em quais compras vale entrar.</p></article>
+      <article class="card navy revela r2"><p class="num">02</p><h3>Central de Licitações</h3><p class="papel">O time que executa</p><p>Encontra as licitações abertas no Brasil inteiro que servem para a sua empresa, mostra o que falta para disputar cada uma e acompanha a empresa em cada disputa.</p></article>
+    </div>
+
+    <figure class="radar revela" aria-label="Exemplo ilustrativo do Radar de Oportunidades">
+      <div class="r-cab"><b>Radar de Oportunidades</b><span>É assim que a Central mostra as oportunidades de cada mentorado. Exemplo com dados fictícios.</span></div>
+      <div class="r-corpo">
+        <div class="r-nums">
+          <div class="r-num ok"><strong data-conta="3">3</strong><i>Verde</i><small>prontas para disputar hoje</small></div>
+          <div class="r-num at"><strong data-conta="2">2</strong><i>Amarelo</i><small>disputáveis depois de resolver uma pendência</small></div>
+          <div class="r-num fo"><strong data-conta="1">1</strong><i>Vermelho</i><small>fora do que a empresa entrega</small></div>
+        </div>
+        <div class="r-lista">
+          <div class="r-linha ok"><i></i><div class="r-o"><b>Manutenção predial de escolas</b><small>Pregão eletrônico · Prefeitura</small></div><div class="r-v"><b>R$ 1,4 mi</b><small>sessão em 9 dias</small></div></div>
+          <div class="r-linha ok"><i></i><div class="r-o"><b>Manutenção de unidades de saúde</b><small>Pregão eletrônico · Autarquia estadual</small></div><div class="r-v"><b>R$ 620 mil</b><small>sessão em 14 dias</small></div></div>
+          <div class="r-linha at"><i></i><div class="r-o"><b>Reforma de ala hospitalar</b><small>Concorrência · Hospital universitário</small><em>Falta um atestado compatível</em></div><div class="r-v"><b>R$ 2,3 mi</b><small>sessão em 21 dias</small></div></div>
+          <div class="r-linha at"><i></i><div class="r-o"><b>Manutenção de prédios administrativos</b><small>Pregão eletrônico · Prefeitura</small><em>Falta o cadastro na plataforma de compras</em></div><div class="r-v"><b>R$ 310 mil</b><small>sessão em 12 dias</small></div></div>
+          <div class="r-linha fo"><i></i><div class="r-o"><b>Fornecimento de mobiliário escolar</b><small>Pregão eletrônico · Secretaria estadual</small><em>Fora do que a empresa entrega</em></div><div class="r-v"><b>R$ 900 mil</b><small>sessão em 18 dias</small></div></div>
         </div>
       </div>
-      <figcaption class="legenda">Exemplo ilustrativo, com dados fictícios. É o formato da leitura que o mentorado recebe.</figcaption>
+      <figcaption class="r-pe"><span><b>A cor sai de seis pontos.</b> Objeto, documentos, atestado, estrutura, cadastro na plataforma e prazo.</span><span>Empresa de exemplo, manutenção predial</span></figcaption>
     </figure>
   </div>
 </section>
 
-<section class="diag" id="diagnostico" aria-labelledby="titulo-diag">
+<section class="faixa escuro marca" id="diagnostico" aria-labelledby="titulo-diag">
   <div class="wrap diag-grid">
     <div class="revela">
-      <h2 id="titulo-diag">Comece pelo <em>Diagnóstico gratuito.</em></h2>
-      <p class="lead">Conte o que a sua empresa vende e onde atende. O time do Legacy Business B2G fala com você pelo WhatsApp para marcar a conversa.</p>
-      <div class="compromisso"><b>O resultado vem do governo. O preparo é nosso.</b>E é nele que colocamos todo o nosso método. A mentoria não garante contrato, faturamento ou prazo de recebimento.</div>
+      <p class="olho"><b>03</b> <span class="losango"></span> Diagnóstico gratuito</p>
+      <div class="filete"></div>
+      <h2 id="titulo-diag">Comece por uma conversa de 30 minutos.</h2>
+      <p class="abre">Conte o que a sua empresa vende e onde atende. O time do Legacy Business B2G fala com você pelo WhatsApp, marca a conversa e mostra onde a sua empresa está hoje no mercado público.</p>
+      <div class="nota"><b>O resultado vem do governo. O preparo é nosso.</b>E é nele que colocamos todo o nosso método. A mentoria não garante contrato, faturamento ou prazo de recebimento.</div>
+      <p class="contatos">Prefere falar agora? <a href="https://wa.me/5571999442586">WhatsApp (71) 99944-2586</a></p>
     </div>
 
-    <form class="form-unico revela" data-form-unico data-origem="site-previa-home" data-variante="completa" action="/api/lead" method="post" novalidate>
+    <form class="form-unico revela r2" data-form-unico data-origem="site-previa-v2" data-variante="completa" action="/api/lead" method="post" novalidate>
       <h3 class="form-titulo">Agende o seu Diagnóstico gratuito</h3>
       <p class="form-sub">Sem custo e sem compromisso.</p>
       <p class="form-passo" data-form-passo hidden>Etapa 1 de 2</p>
@@ -332,10 +361,12 @@ h1 em{font-style:normal;background:linear-gradient(100deg,#F3E2B4 0%,var(--ouro2
 
 <script>
 (function(){
-  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');io.unobserve(e.target);}});},{threshold:.15}):null;
-  document.querySelectorAll('.revela').forEach(function(el){io?io.observe(el):el.classList.add('visto');});
   var reduz=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!reduz){document.querySelectorAll('[data-conta]').forEach(function(el,i){var alvo=+el.getAttribute('data-conta'),n=0;el.textContent='0';setTimeout(function t(){n++;el.textContent=n;if(n<alvo)setTimeout(t,260);},900+i*180);});}
+  function conta(box){box.querySelectorAll('[data-conta]').forEach(function(el,i){if(reduz)return;var alvo=+el.getAttribute('data-conta'),n=0;el.textContent='0';setTimeout(function t(){n++;el.textContent=n;if(n<alvo)setTimeout(t,240);},300+i*160);});}
+  var alvos=document.querySelectorAll('.revela');
+  if(!('IntersectionObserver' in window)){alvos.forEach(function(el){el.classList.add('visto');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');if(e.target.classList.contains('radar'))conta(e.target);io.unobserve(e.target);}});},{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+  alvos.forEach(function(el){io.observe(el);});
 })();
 </script>
 <script src="/assets/js/site.js?v=20261019c"></script>
