@@ -11,7 +11,7 @@
 <link rel="preload" href="/assets/fontes/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/img/favicon/favicon.svg" type="image/svg+xml">
-<script>document.documentElement.className+=" js";</script>
+<script>document.documentElement.className+=" js";if(/[?&]estatico/.test(location.search))document.documentElement.className+=" estatico";</script>
 <style>
 @font-face{font-family:Inter;src:url(/assets/fontes/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Inter;src:url(/assets/fontes/inter-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
@@ -208,6 +208,10 @@ h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-
 .entra,.js .revela,.r-linha{opacity:1!important;transform:none!important}
 .r-cab::after{width:100%}
 }
+.estatico *,.estatico *::before,.estatico *::after{animation:none!important;transition:none!important}
+.estatico .entra,.estatico .revela,.estatico .r-linha{opacity:1!important;transform:none!important}
+.estatico .r-cab::after{width:100%}
+.estatico .cookies{display:none!important}
 </style>
 </head>
 <body>
@@ -362,9 +366,10 @@ h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.02em;font-
 <script>
 (function(){
   var reduz=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var estatico=/[?&]estatico/.test(location.search);
   function conta(box){box.querySelectorAll('[data-conta]').forEach(function(el,i){if(reduz)return;var alvo=+el.getAttribute('data-conta'),n=0;el.textContent='0';setTimeout(function t(){n++;el.textContent=n;if(n<alvo)setTimeout(t,240);},300+i*160);});}
   var alvos=document.querySelectorAll('.revela');
-  if(!('IntersectionObserver' in window)){alvos.forEach(function(el){el.classList.add('visto');});return;}
+  if(estatico||!('IntersectionObserver' in window)){alvos.forEach(function(el){el.classList.add('visto');});return;}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');if(e.target.classList.contains('radar'))conta(e.target);io.unobserve(e.target);}});},{threshold:.18,rootMargin:'0px 0px -6% 0px'});
   alvos.forEach(function(el){io.observe(el);});
 })();
